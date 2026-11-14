@@ -18,3 +18,32 @@ body.menu-open{overflow:hidden}.header{top:5vw;left:3vw;right:3vw}.header nav{ga
 @media(prefers-reduced-motion:reduce){.mobile-menu:not([hidden]){animation:none}.journey-pin{min-height:0}}
 @media(max-width:780px){.ribbon path{stroke-width:3}.hero{height:180vw;min-height:0;max-height:none}.hero-name{font-size:19vw;line-height:1.4;bottom:16vw}.hero-name span+span{margin-top:0}}
 @media(max-width:780px){.header .mobile-menu .pill{font-size:4vw;padding:3vw 4vw;border-width:7px;min-height:54px}.header .menu-toggle:hover{background-color:#fff;color:var(--green)}.footer-note a{display:flex;align-items:center;justify-content:center;gap:12px}}
+
+/* Journey geometry is independent of the widths of its two headings. */
+:root{--button-wine:#440c0c}
+.pill.wine{background-color:var(--button-wine);border-color:#440c0c1a}
+.footer-grid .pill.wine{border-color:#ffffff1c}
+.journey-titles{position:relative;display:grid;grid-template-columns:1fr 1fr}
+.journey-titles>div:last-child{grid-column:2}
+.journey-cta{position:absolute;left:50%;top:20%;transform:translateX(-50%);margin:0}
+.work-banner{margin-bottom:8vw}
+.horizontal-track{padding-left:22vw;padding-right:5vw}
+.scroll-caption{left:5vw;right:auto;top:58%;font-weight:600}
+@media(max-width:780px){
+.journey{height:280svh;padding:0}
+.journey-pin{position:sticky;top:0;height:100svh;min-height:650px;overflow:hidden}
+.journey-titles{display:contents}
+.journey-titles>div{display:block;position:absolute;left:5vw;right:5vw;top:13%;text-align:center}
+.journey-titles>div:last-child{left:5vw;right:5vw;top:auto;bottom:8%;text-align:center}
+.journey-titles h2{font-size:8vw;line-height:1.1}
+.journey-titles p{font-size:3.1vw;margin-top:6px}
+.journey-cta{display:none}
+.ribbon{top:28%;left:0;width:100%;height:52%}
+.ribbon svg{left:47%;width:52svh;max-width:none;top:0;height:auto}
+.ribbon-label{font-size:3.2vw;max-width:94vw}
+.label-left{top:8%}.label-right{bottom:8%}.label-middle{display:none}
+.horizontal-track{padding:0 6vw 15px}
+.work-banner{margin-bottom:18vw}
+}
+@media(prefers-reduced-motion:reduce){.journey{height:auto}.journey-pin{position:relative;height:100svh;min-height:650px}}
+.work-banner{background:var(--button-wine)}
